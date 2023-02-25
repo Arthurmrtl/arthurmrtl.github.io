@@ -18,5 +18,5 @@ def compresor(path, filname,):
 dir = 'D:/Programme/arthurmrtl.github.io/images/horse'
 for filename in os.listdir(dir):
     if(filename != 'icon'):
-        create_icon(dir,filename)
+        compresor(dir,filename)
     
