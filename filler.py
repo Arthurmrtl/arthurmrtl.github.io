@@ -8,7 +8,7 @@ for filename in os.listdir(dir):
     if(filename != 'icon'):
         fileCrop = filename.split('.')
         htmlToAdd = htmlToAdd + """
-    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src=images/anymania/"""+filename+""" ">
+    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src=images/anymania/"""+filename+""" >
         <a href="#"><img src="images/anymania/icon/"""+fileCrop[0]+'_crop.'+fileCrop[1]+""" "class="img-fluid"></a>
     </div>"""
 
