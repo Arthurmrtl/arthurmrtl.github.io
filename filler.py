@@ -3,25 +3,25 @@ import os
 import re
 htmlToAdd =''
 
-dir = 'D:/Programme/arthurmrtl.github.io/images/zc33s'
+dir = 'D:/Programme/arthurmrtl.github.io/images/clio'
 for filename in os.listdir(dir):
     if(filename != 'icon'):
         fileCrop = filename.split('.')
         htmlToAdd = htmlToAdd + """
-    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src=images/zc33s/"""+filename+""" >
-        <a href="#"><img src="images/zc33s/icon/"""+fileCrop[0]+'_crop.'+fileCrop[1]+""" "class="img-fluid"></a>
+    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src=images/clio/"""+filename+""" >
+        <a href="#"><img src="images/clio/icon/"""+fileCrop[0]+'_crop.'+fileCrop[1]+""" "class="img-fluid"></a>
     </div>"""
 
 base = os.path.dirname(os.path.abspath(__file__))
 
-html = open(os.path.join(base, 'D:/Programme/arthurmrtl.github.io/swift.html'))
+html = open(os.path.join(base, 'D:/Programme/arthurmrtl.github.io/clio3rs.html'))
 
 soup = BeautifulSoup(html, 'html.parser')
 
 div = soup.find("div", {"id": "last"})
 div.insert_after(htmlToAdd)
 
-with open('D:/Programme/arthurmrtl.github.io/swift.html', "wb") as f_output:
+with open('D:/Programme/arthurmrtl.github.io/clio3rs.html', "wb") as f_output:
     f_output.write(soup.prettify("utf-8",formatter=None))
 
 
