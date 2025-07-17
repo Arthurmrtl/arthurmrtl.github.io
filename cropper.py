@@ -7,15 +7,15 @@ def create_icon(path, filname,):
     image.thumbnail(new_size, Image.ANTIALIAS)
     image = image.convert("RGB")
     name = filname.split('.')
-    image.save(path+'/icon/'+name[0]+'_crop.'+name[1], "JPEG", quality=30)
+    image.save(path+'/icon/'+name[0]+'_crop.'+name[1], "JPEG", quality=35)
     
 def compresor(path, filname,):
     image = Image.open(path+'/'+filename)
     image = image.convert("RGB")
-    image.save(path+'/'+filname, "JPEG", quality=70)
+    image.save(path+'/'+filname, "JPEG", quality=90)
 
 
-dir = 'D:/Programme/arthurmrtl.github.io/images/plane'
+dir = 'D:/Programme/arthurmrtl.github.io/images/kalvinjosi'
 for filename in os.listdir(dir):
     if(filename != 'icon'):
         compresor(dir,filename)
