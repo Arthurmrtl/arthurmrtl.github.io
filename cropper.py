@@ -15,7 +15,7 @@ def compresor(path, filname,):
     image.save(path+'/'+filname, "JPEG", quality=90)
 
 
-dir = 'D:/Programme/arthurmrtl.github.io/images/holiday'
+dir = 'D:/Programme/arthurmrtl.github.io/images/24hvtt'
 for filename in os.listdir(dir):
     if(filename != 'icon'):
         compresor(dir,filename)
